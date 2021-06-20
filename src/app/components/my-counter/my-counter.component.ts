@@ -11,7 +11,7 @@ import { increment, decrement, reset } from '../../stores/actions/counter.action
 export class MyCounterComponent implements OnInit {
   public count$: Observable<number>;
   constructor(
-    private store: Store<{ count: number }>
+    private store: Store<{ count: number, login: { isLogin: boolean}, home: { users: any[] } }>
   ) { }
 
   ngOnInit() {
