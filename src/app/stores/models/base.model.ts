@@ -6,5 +6,5 @@ export interface IAppState {
     count: number,
     login: ILoginState,
     home: IHomeState,
-    game: IScoreBoardState
+    game?: IScoreBoardState
 }

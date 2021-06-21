@@ -1,0 +1,24 @@
+<div class="main-container">
+  <table>
+    <tr>
+      <td colspan="2">Tỉ số trận đấu</td>
+    </tr>
+    <tr>
+      <td>Home</td>
+      <td>Away</td>
+    </tr>
+    <tr>
+      <td>{{ homeScore$ | async }}</td>
+      <td>{{ awayScore$ | async }}</td>
+    </tr>
+  </table>
+  <p>Sum of scores: {{ sumOfScore$ | async }}</p>
+  <div>
+    <button (click)="addHomeScore()">Add home score</button>
+    <button (click)="addAwayScore()">Add away score</button>
+    <button (click)="resetScore()">Reset</button>
+    <button (click)="setScore()">Set scores</button>
+    <button (click)="clearMemoizedValue()">Clear memoized values</button>
+  </div>
+  <button (click)="goToHome()">Go to Home</button>
+</div>
