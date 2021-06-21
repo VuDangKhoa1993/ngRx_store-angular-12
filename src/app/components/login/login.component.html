@@ -1,0 +1,7 @@
+<p>isLogged: {{ (isLogin$ | async)?.isLogin }}</p>
+<button *ngIf="(isLogin$ | async)?.isLogin; else login" (click)="onLogout()">Log out</button>
+<ng-template #login>
+    <button (click)="onLogin()">Log in</button>
+</ng-template>
+<br>
+<hr>
