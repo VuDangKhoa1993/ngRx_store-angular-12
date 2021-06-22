@@ -37,7 +37,3 @@ export const getSumOfScore = createSelector(
     scoreboardSelector.getAwayScore,
     (homeScore: number, awayScore: number) => homeScore + awayScore
 );
-
-export const clearMemoizedAllSelectorValues = () => {
-    return selectFeature.release();
-}

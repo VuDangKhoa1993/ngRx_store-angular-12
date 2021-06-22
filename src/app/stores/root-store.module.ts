@@ -1,3 +1,4 @@
+import { metaReducers } from './reducers/meta.reducer';
 import { IAppState } from './models/base.model';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +15,7 @@ const appReducers: ActionReducerMap<IAppState, Action> = {
   declarations: [],
   imports: [
     CommonModule,
-    StoreModule.forRoot(appReducers)
+    StoreModule.forRoot(appReducers, { metaReducers })
   ]
 })
 export class RootStoreModule { }

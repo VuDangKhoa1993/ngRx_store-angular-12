@@ -13,7 +13,7 @@ import { getAllUsers } from '@store/actions/home.action';
 export class HomeComponent implements OnInit {
   public users$: Observable<{ users: User[] }>;
   constructor(
-    private store: Store<IAppState>
+    private readonly store: Store<IAppState>
   ) { }
 
   ngOnInit(): void {

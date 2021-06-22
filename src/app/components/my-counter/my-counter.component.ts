@@ -1,8 +1,8 @@
+import { IAppState } from '@store/models/base.model';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { increment, decrement, reset } from '../../stores/actions/counter.action';
-
+import { decrement, increment, reset } from '@store/actions/counter.action';
 @Component({
   selector: 'app-my-counter',
   templateUrl: './my-counter.component.html',
@@ -11,7 +11,7 @@ import { increment, decrement, reset } from '../../stores/actions/counter.action
 export class MyCounterComponent implements OnInit {
   public count$: Observable<number>;
   constructor(
-    private store: Store<{ count: number, login: { isLogin: boolean}, home: { users: any[] } }>
+    private readonly store: Store<IAppState>
   ) { }
 
   ngOnInit() {

@@ -4,8 +4,7 @@ import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { awayScore, homeScore, resetScore, setScore } from '@store/actions/score-board.action';
-import { clearMemoizedAllSelectorValues, getSumOfScore, scoreboardSelector, selectFeature } from '@store/reducers/score-board.reducer';
-
+import { getSumOfScore, scoreboardSelector } from '@store/reducers/score-board.reducer';
 @Component({
   selector: 'app-score-board',
   templateUrl: './score-board.component.html',
@@ -16,7 +15,7 @@ export class ScoreBoardComponent implements OnInit {
   public awayScore$: Observable<number>;
   public sumOfScore$: Observable<number>;
   constructor(
-    private store: Store<IAppState>,
+    private readonly store: Store<IAppState>,
     private route: Router
   ) { }
 
@@ -40,11 +39,6 @@ export class ScoreBoardComponent implements OnInit {
 
   setScore() {
     this.store.dispatch(setScore({ game: { home: 2, away: 0 } }));
-  }
-
-  clearMemoizedValue() {
-    // reset memoized value of the selectors
-    clearMemoizedAllSelectorValues();
   }
 
   goToHome() {
