@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  staging: false,
+  baseUrl: 'http://localhost:3000',
+  baseStagingUrl: 'http://localhost:8080',
+  baseProdUrl: 'http://thegioididong'
 };
 
 /*

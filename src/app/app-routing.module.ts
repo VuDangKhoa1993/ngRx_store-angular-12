@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/scoreboard/scoreboard.module').then(m => m.ScoreboardModule)
   },
   {
+    path: 'movies',
+    loadChildren: () => import('./modules/movie/movie.module').then(m => m.MovieModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

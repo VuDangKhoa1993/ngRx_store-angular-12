@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Action, ActionReducerMap, StoreModule } from '@ngrx/store';
 import { counterReducer, homeReducer, loginReducer } from './reducers';
+import { movieReducer } from './reducers/movie.reducer';
+import { EffectsModule } from '@ngrx/effects';
 
 const appReducers: ActionReducerMap<IAppState, Action> = {
   count: counterReducer,
@@ -15,7 +17,8 @@ const appReducers: ActionReducerMap<IAppState, Action> = {
   declarations: [],
   imports: [
     CommonModule,
-    StoreModule.forRoot(appReducers, { metaReducers })
+    StoreModule.forRoot(appReducers, { metaReducers }),
+    EffectsModule.forRoot([])
   ]
 })
 export class RootStoreModule { }

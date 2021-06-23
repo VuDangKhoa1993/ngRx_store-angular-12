@@ -6,6 +6,9 @@ import { MyCounterComponent } from './components/my-counter/my-counter.component
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from '@environment/environment';
+import { baseUrlConfigLoading, BASE_URL } from '@shared/tokens/tokens';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,14 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RootStoreModule
+    RootStoreModule,
+    HttpClientModule
+  ],
+  providers: [
+    {
+      provide: BASE_URL,
+      useFactory: baseUrlConfigLoading
+    }
   ],
   bootstrap: [AppComponent]
 })
