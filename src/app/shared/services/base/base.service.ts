@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from "@angular/core";
 import { BASE_URL } from "@shared/tokens/tokens";
 import { IBaseApiResponse, IBaseService, IGetAllResponse } from '@shared/models/base';
-
 @Injectable({
     providedIn: 'root'
 })

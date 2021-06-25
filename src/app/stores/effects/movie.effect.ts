@@ -7,7 +7,7 @@ import { MovieActions } from '@store/actions/movie.action';
 import { catchError, map, mergeMap } from 'rxjs/operators';
 import { Movie } from '@shared/models/movie';
 
-@Injectable()
+@Injectable() 
 export class MovieEffects {
     constructor(
         private action$: Actions,

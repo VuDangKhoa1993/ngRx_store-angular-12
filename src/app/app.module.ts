@@ -7,21 +7,23 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from '@environment/environment';
 import { baseUrlConfigLoading, BASE_URL } from '@shared/tokens/tokens';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '@shared/share.module';
 @NgModule({
   declarations: [
     AppComponent,
     MyCounterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RootStoreModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [
     {
