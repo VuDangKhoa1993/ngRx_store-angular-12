@@ -19,4 +19,8 @@
 <input type="number" [value]="myFormControl.value" (change)="updateSlider($event)">
 <hr>
 <h2>Demo date time picker </h2>
-<app-datetimepicker></app-datetimepicker>
+<div>
+    <form [formGroup]="form">
+        <app-datetimepicker [form]="form" formControlName="dateTimePicker"></app-datetimepicker>
+    </form>
+</div>

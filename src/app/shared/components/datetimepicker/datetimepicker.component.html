@@ -1,6 +1,6 @@
-<div [formGroup]="fg" class="input-container">
-    <input type="date" id="dateTimePicker" formControlName="dateTimePicker">
-    <div class="invalid-feedback" *ngIf="(date?.touched || date?.dirty) && date?.invalid">
+<div [formGroup]="form" class="input-container">
+    <input #date type="date" [id]="formControlName" [formControl]="formControl">
+    <div class="invalid-feedback" *ngIf="invalid">
         Invalid date
     </div>
     <p>Control value: {{ date?.value }}</p>

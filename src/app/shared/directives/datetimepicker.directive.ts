@@ -59,7 +59,6 @@ export class DateTimePickerDirective implements ControlValueAccessor, Validator 
 
     validate(control: AbstractControl) : ValidationErrors | null {
         const date = new Date(control.value);
-        console.log(control.value && this.isValidDate(date) ? null : { date: true })
         return control.value && this.isValidDate(date) ? null : { date: true };
     }
 

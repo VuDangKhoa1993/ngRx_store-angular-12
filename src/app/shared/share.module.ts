@@ -7,7 +7,7 @@ import { CommonModule } from "@angular/common";
 
 const components = [NgxJquerySliderComponent, DatetimepickerComponent];
 const modules = [ReactiveFormsModule, FormsModule, CommonModule];
-const directives = [DateTimePickerDirective];
+const directives = [];
 @NgModule({
   declarations: [...components, ...directives],
   imports: [...modules],
