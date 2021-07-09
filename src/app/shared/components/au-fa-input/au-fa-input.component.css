@@ -1,0 +1,18 @@
+fa-icon {
+    padding: 0 2px 0 5px;
+}
+
+:host {
+    border: 2px solid black;
+    padding: 3px 0px;
+    background-color: white;
+    display: inline-block;
+    margin: 0 0 10px 0;
+}
+
+:host ::ng-deep input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    height: 100%;
+}

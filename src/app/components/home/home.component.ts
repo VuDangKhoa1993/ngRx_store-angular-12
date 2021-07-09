@@ -1,10 +1,11 @@
 import { Store } from '@ngrx/store';
-import { Component, OnInit } from '@angular/core';
 import { User } from '@shared/models/user';
 import { Observable } from 'rxjs';
 import { IAppState } from '@store/models/base.model';
 import { getAllUsers } from '@store/actions/home.action';
 import { FormControl, FormGroup } from '@angular/forms';
+import { faComment, faEnvelope, faAddressCard, IconDefinition } from '@fortawesome/free-regular-svg-icons';                //import icon
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,14 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   public users$: Observable<{ users: User[] }>;
   public myFormControl = new FormControl(19);
   public form: FormGroup;
-
+  
+  faComment: IconDefinition = faComment;
+  faEnvelope : IconDefinition = faEnvelope;
+  faAddressCard: IconDefinition = faAddressCard;
   constructor(
     private readonly store: Store<IAppState>
   ) { }

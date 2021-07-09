@@ -4,13 +4,26 @@ import { DatetimepickerComponent } from "./components/datetimepicker/datetimepic
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { DateTimePickerDirective } from "./directives/datetimepicker.directive";
 import { CommonModule } from "@angular/common";
+import { AuFaInputComponent } from "./components/au-fa-input/au-fa-input.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome"; //Import here
 
-const components = [NgxJquerySliderComponent, DatetimepickerComponent];
-const modules = [ReactiveFormsModule, FormsModule, CommonModule];
+const components = [
+  NgxJquerySliderComponent,
+  DatetimepickerComponent,
+  AuFaInputComponent,
+];
+
+const modules = [
+  CommonModule,
+  ReactiveFormsModule,
+  FormsModule,
+  FontAwesomeModule,
+];
 const directives = [];
+
 @NgModule({
   declarations: [...components, ...directives],
   imports: [...modules],
-  exports: [...components],
+  exports: [...components, ...modules],
 })
 export class SharedModule {}
